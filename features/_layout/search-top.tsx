@@ -22,7 +22,7 @@ export default function SearchTop() {
   const onClear = () => setSearchParams({ query: "" });
 
   const placeholder = pathname
-    ? `Search ${pathname.replace("/", "")}...`
+    ? `Search${pathname.replace("/", "")}...`
     : "Search places, restaurants or businesses...";
   return (
     <div className="container mx-auto mt-6 flex w-full max-w-170 items-center justify-center gap-6 md:mt-3 lg:mt-0">

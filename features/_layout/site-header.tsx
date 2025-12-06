@@ -11,8 +11,10 @@ import UserPopover from "./user-popover";
 
 export default function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 bg-background/95 py-4 backdrop-blur-lg supports-backdrop-filter:bg-background/50">
-      <div className={cn("container flex w-full items-center justify-between")}>
+    <header className="sticky top-0 z-50 bg-background/95 py-3 backdrop-blur-lg supports-backdrop-filter:bg-background/50 md:py-4">
+      <div
+        className={cn("flex w-full items-center justify-between px-2 md:px-5")}
+      >
         <div className="flex items-center gap-1 md:gap-3">
           <MenuSheet />
           <Link
@@ -29,7 +31,7 @@ export default function SiteHeader() {
           </Suspense>
         </div>
 
-        <div className="ml-auto flex items-center gap-2">
+        <div className="ml-auto flex items-center gap-1 md:gap-2">
           <Button
             className="rounded-full lg:hidden"
             size={"icon-sm"}
@@ -38,7 +40,11 @@ export default function SiteHeader() {
             <SearchIcon />
           </Button>
           <AddNewTop />
-          <Button className="rounded-full" size="icon-lg" variant={"ghost"}>
+          <Button
+            className="hidden rounded-full md:flex"
+            size="icon-lg"
+            variant={"ghost"}
+          >
             <BellIcon className="size-6" />
           </Button>
           <UserPopover />

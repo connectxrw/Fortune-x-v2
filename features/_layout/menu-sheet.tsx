@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetFooter,
@@ -11,6 +12,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { siteConfig } from "@/config/site";
 import MenuNavs from "./menu-navs";
 
 export function MenuSheet() {
@@ -22,29 +24,31 @@ export function MenuSheet() {
         </Button>
       </SheetTrigger>
       <SheetContent
-        className="rounded-r-2xl border border-muted lg:max-w-xs dark:bg-black"
+        className="rounded-r-2xl border border-muted lg:max-w-2xs dark:bg-black"
         side="left"
       >
-        <SheetHeader>
-          <SheetTitle>
+        <SheetHeader className="pb-0">
+          <SheetTitle className="flex items-center gap-1 md:gap-3">
+            <SheetClose asChild>
+              <Button className="rounded-full" size="icon-lg" variant={"ghost"}>
+                <MenuIcon className="size-6" />
+              </Button>
+            </SheetClose>
             <Link
-              className="flex items-center gap-2 font-bold text-lg"
-              href="/"
+              className="font-mono font-semibold text-xl capitalize italic tracking-tighter md:text-2xl"
+              href={"/"}
             >
-              FortuneX
+              {siteConfig.name}
             </Link>
           </SheetTitle>
           <SheetDescription className="sr-only">FortuneX Menu</SheetDescription>
         </SheetHeader>
-        <ScrollArea className="h-[calc(100vh-13rem)]">
+        <ScrollArea className="h-[calc(100vh-10rem)]">
           <MenuNavs />
         </ScrollArea>
         <SheetFooter>
-          <Button asChild variant={"outline"}>
+          <Button asChild variant={"secondary"}>
             <Link href="/waiting-list">Join Waiting List</Link>
-          </Button>
-          <Button asChild>
-            <Link href="/business/new">Add Your Business</Link>
           </Button>
         </SheetFooter>
       </SheetContent>

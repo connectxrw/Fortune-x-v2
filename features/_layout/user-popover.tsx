@@ -1,12 +1,22 @@
 "use client";
 
-import { HouseIcon, LogInIcon, LogOutIcon, UserIcon } from "lucide-react";
+import {
+  CircleQuestionMarkIcon,
+  GlobeIcon,
+  KeyboardIcon,
+  LanguagesIcon,
+  LogInIcon,
+  LogOutIcon,
+  MessageSquareShareIcon,
+  MoonIcon,
+  SettingsIcon,
+  SquareUserIcon,
+  UserIcon,
+} from "lucide-react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { ThemeSwitcher } from "@/components/custom/theme-switcher";
+import { FaGoogle } from "react-icons/fa6";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Kbd, KbdGroup } from "@/components/ui/kbd";
 import {
   Popover,
   PopoverContent,
@@ -16,9 +26,7 @@ import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
 import profile from "@/public/profile.svg";
 
-// ============ Main Component ============
 export default function UserPopover() {
-  // const { isAuthenticated, isLoading } = useConvexAuth();
   const isAuthenticated = true;
   const isLoading = false;
 
@@ -33,18 +41,13 @@ export default function UserPopover() {
   );
 }
 
-// ============ Authenticated User Popover ============
 function AuthenticatedUserPopover() {
   const user = {
     name: "John Doe",
     email: "john.doe@example.com",
     image: profile.src,
   };
-  const router = useRouter();
 
-  const handleSignOut = () => {
-    router.push("/sign-in");
-  };
   if (!user) return null;
 
   const getUserInitials = () => {
@@ -86,59 +89,41 @@ function AuthenticatedUserPopover() {
             <p className="truncate text-muted-foreground">@caleb</p>
           </div>
         </Link>
-
         <Separator />
 
-        {/* User Links Section */}
-        <div>user links</div>
-
-        <Separator />
-
-        {/* Settings Section */}
-        <div className="flex flex-col gap-1 p-3">
-          <div className="flex cursor-pointer items-center justify-between rounded-lg px-3 py-2 text-sm transition-colors hover:bg-muted">
-            <div className="flex items-center gap-3">
-              <KbdGroup className="text-muted-foreground">
-                <Kbd>⌘</Kbd>
-                <Kbd>K</Kbd>
-              </KbdGroup>
-              <span>Command Menu</span>
-            </div>
+        <div className="py-2">
+          <div className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
+            <SquareUserIcon className="size-5 text-muted-foreground" />
+            <span>View your page</span>
           </div>
 
-          <div className="flex cursor-pointer items-center justify-between rounded-lg px-3 py-2 text-sm transition-colors hover:bg-muted">
-            <span>Theme</span>
-            <ThemeSwitcher />
+          <div className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
+            <FaGoogle className="size-5 text-muted-foreground" />
+            <span>Google Account</span>
+          </div>
+          <div className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
+            <SettingsIcon className="size-5 text-muted-foreground" />
+            <span>Settings</span>
+          </div>
+
+          <div className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
+            <LogOutIcon className="size-5 text-muted-foreground" />
+            <span>Sign out</span>
           </div>
         </div>
 
         <Separator />
 
-        {/* Actions Section */}
-        <div className="flex flex-col gap-1 p-3">
-          <Link
-            className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition-colors hover:bg-muted"
-            href="/home"
-          >
-            <HouseIcon className="size-4 text-muted-foreground" />
-            <span>Home Page</span>
-          </Link>
+        <PublicUserNavs />
 
-          <button
-            className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2 text-red-600 text-sm transition-colors hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-950/20"
-            onClick={handleSignOut}
-            type="button"
-          >
-            <LogOutIcon className="size-4" />
-            <span>Sign Out</span>
-          </button>
-        </div>
+        <Separator />
+
+        <HelpNavs />
       </PopoverContent>
     </Popover>
   );
 }
 
-// ============ Unauthenticated User Popover ============
 function UnauthenticatedUserPopover() {
   return (
     <Popover>
@@ -161,47 +146,59 @@ function UnauthenticatedUserPopover() {
         </div>
 
         <Separator />
-
-        {/* Settings Section */}
-        <div className="flex flex-col gap-1 p-3">
-          <div className="flex cursor-pointer items-center justify-between rounded-lg px-3 py-2 text-sm transition-colors hover:bg-muted">
-            <div className="flex items-center gap-3">
-              <KbdGroup className="text-muted-foreground">
-                <Kbd>⌘</Kbd>
-                <span>+</span>
-                <Kbd>K</Kbd>
-              </KbdGroup>
-              <span>Command Menu</span>
-            </div>
-          </div>
-
-          <div className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2 text-sm transition-colors hover:bg-muted">
-            <ThemeSwitcher />
-            <span>Theme</span>
+        <div className="py-2">
+          <div className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
+            <LogInIcon className="size-5 text-muted-foreground" />
+            <span>Sign in</span>
           </div>
         </div>
+        <Separator />
+
+        <PublicUserNavs />
 
         <Separator />
 
-        {/* Actions Section */}
-        <div className="flex flex-col gap-1 p-3">
-          <Link
-            className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition-colors hover:bg-muted"
-            href="/home"
-          >
-            <HouseIcon className="size-4 text-muted-foreground" />
-            <span>Home Page</span>
-          </Link>
-
-          <Link
-            className="flex items-center gap-3 rounded-lg px-3 py-2 font-medium text-primary text-sm transition-colors hover:bg-primary/10"
-            href="/sign-in"
-          >
-            <LogInIcon className="size-4" />
-            <span>Sign In or Sign Up</span>
-          </Link>
-        </div>
+        <HelpNavs />
       </PopoverContent>
     </Popover>
+  );
+}
+
+function PublicUserNavs() {
+  return (
+    <div className="py-2">
+      <div className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
+        <MoonIcon className="size-5 text-muted-foreground" />
+        <span>Appearence: Device theme</span>
+      </div>
+      <div className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
+        <LanguagesIcon className="size-5 text-muted-foreground" />
+        <span>Display Language: English</span>
+      </div>
+      <div className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
+        <GlobeIcon className="size-5 text-muted-foreground" />
+        <span>Location: Rwanda</span>
+      </div>
+      <div className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
+        <KeyboardIcon className="size-5 text-muted-foreground" />
+        <span>Keyboard Shortcuts</span>
+      </div>
+    </div>
+  );
+}
+
+function HelpNavs() {
+  return (
+    <div className="py-2">
+      <div className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
+        <CircleQuestionMarkIcon className="size-5 text-muted-foreground" />
+        <span>Help</span>
+      </div>
+
+      <div className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
+        <MessageSquareShareIcon className="size-5 text-muted-foreground" />
+        <span>Send feedback</span>
+      </div>
+    </div>
   );
 }

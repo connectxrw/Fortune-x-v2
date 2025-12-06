@@ -13,7 +13,7 @@ export function AddNewTop() {
     return (
       <Button
         asChild
-        className="hidden rounded-full lg:flex"
+        className="rounded-full lg:flex"
         disabled={isLoading}
         variant={"secondary"}
       >
@@ -26,15 +26,22 @@ export function AddNewTop() {
   }
 
   return (
-    <Button
-      asChild
-      className="hidden rounded-full lg:flex"
-      variant={"secondary"}
-    >
-      <Link href="/business/new">
-        <PlusIcon className="size-6" />
-        <span>Create</span>
-      </Link>
-    </Button>
+    <>
+      <Button
+        asChild
+        className="hidden rounded-full md:flex"
+        variant={"secondary"}
+      >
+        <Link href="/business/new">
+          <PlusIcon className="size-6" />
+          <span>Create</span>
+        </Link>
+      </Button>
+      <Button asChild className="rounded-full md:hidden" variant={"ghost"}>
+        <Link href="/business/new">
+          <PlusIcon className="size-6" />
+        </Link>
+      </Button>
+    </>
   );
 }

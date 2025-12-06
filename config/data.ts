@@ -1,10 +1,19 @@
 import {
+  ActivityIcon,
+  BookmarkIcon,
   BriefcaseBusinessIcon,
+  CircleQuestionMarkIcon,
+  FlagIcon,
+  GalleryThumbnailsIcon,
   HeartPulseIcon,
   HouseIcon,
   LandmarkIcon,
   MapIcon,
+  MessageSquareShareIcon,
+  Repeat2Icon,
+  SettingsIcon,
   ShoppingCartIcon,
+  ThumbsUpIcon,
   TicketsIcon,
   UtensilsCrossedIcon,
 } from "lucide-react";
@@ -59,6 +68,68 @@ export const menuNavs = [
     icon: LandmarkIcon,
     link: "/gvt-services",
     active: false,
+  },
+];
+export const youNavs = [
+  {
+    title: "Activity",
+    icon: ActivityIcon,
+    link: "/activity",
+    active: true,
+  },
+  {
+    title: "Liked Posts",
+    icon: ThumbsUpIcon,
+
+    link: "/liked-posts",
+    active: true,
+  },
+  {
+    title: "Bookmarks",
+    icon: BookmarkIcon,
+    link: "/bookmarks",
+    active: true,
+  },
+
+  {
+    title: "Your posts",
+    icon: GalleryThumbnailsIcon,
+    link: "/your-posts",
+    active: true,
+  },
+  {
+    title: "Shared",
+    icon: Repeat2Icon,
+    link: "/shared",
+    active: true,
+  },
+];
+export const otherNavs = [
+  {
+    title: "Settings",
+    icon: SettingsIcon,
+    link: "/settings",
+    active: true,
+  },
+  {
+    title: "Report history",
+    icon: FlagIcon,
+
+    link: "/liked-posts",
+    active: true,
+  },
+  {
+    title: "Help",
+    icon: CircleQuestionMarkIcon,
+    link: "/help",
+    active: true,
+  },
+
+  {
+    title: "Send feedback",
+    icon: MessageSquareShareIcon,
+    link: "/send-feedback",
+    active: true,
   },
 ];
 
