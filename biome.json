@@ -23,6 +23,12 @@
       },
       "security": {
         "noDangerouslySetInnerHtml": "off"
+      },
+      "nursery": {
+        "noLeakedRender": "off"
+      },
+      "style": {
+        "useBlockStatements": "off"
       }
     },
     "domains": {
