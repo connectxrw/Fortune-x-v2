@@ -92,10 +92,13 @@ function AuthenticatedUserPopover() {
         <Separator />
 
         <div className="py-2">
-          <div className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
+          <Link
+            className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary"
+            href="/page"
+          >
             <SquareUserIcon className="size-5 text-muted-foreground" />
             <span>View your page</span>
-          </div>
+          </Link>
 
           <div className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
             <FaGoogle className="size-5 text-muted-foreground" />
