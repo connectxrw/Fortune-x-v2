@@ -35,7 +35,7 @@ export default async function ViewPost(params: PageProps<"/view">) {
             <CarouselItem key={image}>
               <AspectRatio
                 className="overflow-hidden rounded-lg"
-                ratio={16 / 8}
+                ratio={16 / 9}
               >
                 <Image
                   alt="my image"
@@ -64,8 +64,8 @@ export default async function ViewPost(params: PageProps<"/view">) {
         )}
       </Carousel>
       <h3 className="font-bold text-xl">{post.title}</h3>
-      <div className="flex w-full items-center justify-between gap-8">
-        <div className="flex w-full items-center gap-6">
+      <div className="flex w-full flex-col items-center justify-between gap-8 lg:flex-row">
+        <div className="flex w-full items-center justify-between gap-6 lg:justify-start">
           <div className="flex items-center gap-2">
             <Avatar className="size-9 md:size-11">
               <AvatarImage src="https://github.com/leconstantin.png" />
@@ -82,7 +82,7 @@ export default async function ViewPost(params: PageProps<"/view">) {
           </div>
           <ProviderBtn />
         </div>
-        <ScrollArea className="flex whitespace-nowrap">
+        <ScrollArea className="flex w-full whitespace-nowrap lg:w-fit">
           <PostBtns />
           <ScrollBar className="hidden" orientation="horizontal" />
         </ScrollArea>

@@ -10,10 +10,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import type { Tposts } from "@/types";
+import type { Tpost } from "@/types";
 import { PostCardActions } from "./card-actions";
 
-export default function PostCard({ post }: { post: Tposts }) {
+export default function PostCard({ post }: { post: Tpost }) {
   return (
     <div className="flex cursor-pointer flex-col rounded-lg p-2 font-roboto transition-all duration-300 ease-in hover:bg-secondary">
       <Link href={`/view?v=${post.slug}`}>

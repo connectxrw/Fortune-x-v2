@@ -1,4 +1,4 @@
-export type Tposts = {
+export type Tpost = {
   imgUrls: string[];
   title: string;
   slug: string;

@@ -42,7 +42,7 @@ function PopoverCardActions() {
           <EllipsisVerticalIcon className="size-5" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="z-10 w-60 overflow-hidden p-0" side="right">
+      <PopoverContent className="z-10 w-60 overflow-hidden p-0" side="bottom">
         <div className="flex flex-col">
           <div className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
             <PenIcon className="size-5 text-muted-foreground" />

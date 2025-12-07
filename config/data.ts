@@ -17,7 +17,7 @@ import {
   TicketsIcon,
   UtensilsCrossedIcon,
 } from "lucide-react";
-import type { Tposts } from "@/types";
+import type { Tpost } from "@/types";
 
 export const menuNavs = [
   {
@@ -202,7 +202,7 @@ export const homeFilters = [
   },
 ];
 
-export const homePosts: Tposts[] = [
+export const homePosts: Tpost[] = [
   {
     imgUrls: ["/places/kivu.jpg"],
     title: "Escape to Lake Kivu (Book Your Unforgettable Experience Today)",
