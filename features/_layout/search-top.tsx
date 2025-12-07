@@ -1,7 +1,6 @@
 "use client";
 import { LoaderIcon, SearchIcon, XIcon } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { debounce } from "nuqs";
 import { useTransition } from "react";
 import { AiSearchIcon } from "@/components/icons";
@@ -14,16 +13,12 @@ import {
 import { getAiLinks, useFilters } from "@/lib/nuqs-params";
 
 export default function SearchTop() {
-  const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
   const [{ query }, setSearchParams] = useFilters({
     startTransition,
   });
   const onClear = () => setSearchParams({ query: "" });
 
-  const placeholder = pathname
-    ? `Search${pathname.replace("/", "")}...`
-    : "Search places, restaurants or businesses...";
   return (
     <div className="container mx-auto mt-6 flex w-full max-w-170 items-center justify-center gap-6 md:mt-3 lg:mt-0">
       <InputGroup className="min-h-10 rounded-full bg-background shadow-none">
@@ -40,7 +35,7 @@ export default function SearchTop() {
               );
             });
           }}
-          placeholder={placeholder}
+          placeholder="Search..."
           value={query || ""}
         />
         <InputGroupAddon>

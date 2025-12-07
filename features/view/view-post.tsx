@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { notFound } from "next/navigation";
+import Link from "next/link";
 import { CarouselDots } from "@/components/custom/carousel-dots";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -19,7 +19,11 @@ export default async function ViewPost(params: PageProps<"/view">) {
   const { v } = await params.searchParams;
   const post = await getPost(v as string);
   if (!post) {
-    return notFound();
+    return (
+      <div className="flex h-screen items-center justify-center">
+        <h1>Post not found</h1>
+      </div>
+    );
   }
   return (
     <div className="flex flex-col gap-3">
@@ -66,20 +70,24 @@ export default async function ViewPost(params: PageProps<"/view">) {
       <h3 className="font-bold text-xl">{post.title}</h3>
       <div className="flex w-full flex-col items-center justify-between gap-8 lg:flex-row">
         <div className="flex w-full items-center justify-between gap-6 lg:justify-start">
-          <div className="flex items-center gap-2">
-            <Avatar className="size-9 md:size-11">
+          <Link
+            className="flex items-center gap-3"
+            href={`/${post.businessHandle}`}
+            title={post.businessName}
+          >
+            <Avatar className="size-9 md:size-10">
               <AvatarImage src="https://github.com/leconstantin.png" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
             <div>
-              <h3 className="font-medium text-sm md:text-base">
+              <h3 className="font-medium text-[16px] leading-5.5 md:text-base">
                 {post.businessName}
               </h3>
-              <p className="text-muted-foreground text-xs md:text-sm">
+              <p className="text-muted-foreground text-xs md:text-xs">
                 {post.views} Followers
               </p>
             </div>
-          </div>
+          </Link>
           <ProviderBtn />
         </div>
         <ScrollArea className="flex w-full whitespace-nowrap lg:w-fit">

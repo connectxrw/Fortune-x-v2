@@ -23,7 +23,7 @@ export default function FilterBtns({
     <div
       className={cn(
         "container w-full overflow-hidden pt-5",
-        pathname === "/view" && "hidden"
+        pathname !== "/" && "hidden"
       )}
     >
       <div className={cn("relative lg:px-5")}>

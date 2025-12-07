@@ -3,6 +3,7 @@ export type Tpost = {
   title: string;
   slug: string;
   businessName: string;
+  businessHandle: string;
   views: string;
   time: string;
 };
