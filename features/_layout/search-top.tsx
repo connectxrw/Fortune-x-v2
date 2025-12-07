@@ -26,7 +26,7 @@ export default function SearchTop() {
     : "Search places, restaurants or businesses...";
   return (
     <div className="container mx-auto mt-6 flex w-full max-w-170 items-center justify-center gap-6 md:mt-3 lg:mt-0">
-      <InputGroup className="min-h-10 rounded-full bg-background">
+      <InputGroup className="min-h-10 rounded-full bg-background shadow-none">
         <InputGroupInput
           onChange={(e) => {
             startTransition(async () => {

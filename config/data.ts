@@ -17,6 +17,7 @@ import {
   TicketsIcon,
   UtensilsCrossedIcon,
 } from "lucide-react";
+import type { Tposts } from "@/types";
 
 export const menuNavs = [
   {
@@ -163,5 +164,71 @@ export const footerLinks = [
       { name: "Cookie Policy", href: "/", external: false },
       { name: "Editorial Policy", href: "/", external: false },
     ],
+  },
+];
+
+export const homeFilters = [
+  {
+    label: "Restaurants",
+    slug: "restaurants",
+  },
+  {
+    label: "Housing",
+    slug: "housing",
+  },
+  {
+    label: "Tourism",
+    slug: "tourism",
+  },
+  {
+    label: "Health care",
+    slug: "health",
+  },
+  {
+    label: "Shopping",
+    slug: "shopping",
+  },
+  {
+    label: "Tickets",
+    slug: "tickets",
+  },
+  {
+    label: "Jobs",
+    slug: "jobs",
+  },
+  {
+    label: "Gvt services",
+    slug: "gvt-services",
+  },
+];
+
+export const homePosts: Tposts[] = [
+  {
+    imgUrls: ["/places/kivu.jpg"],
+    title: "Escape to Lake Kivu (Book Your Unforgettable Experience Today)",
+    businessName: "Rathon Ltd",
+    views: "4.9K views",
+    time: "17 hours ago",
+  },
+  {
+    imgUrls: ["/places/nyungwe.jpg"],
+    title: "Discover Nyungwe’s Hidden Wonders (Join the Next Adventure)",
+    businessName: "Nyungwe Ltd",
+    views: "7K views",
+    time: "1 hours ago",
+  },
+  {
+    imgUrls: ["/restaurant/image-1.avif"],
+    title: "Start Your Morning Right (Treat Yourself to Breakfast at Bistro)",
+    businessName: "Bistro",
+    views: "1.2K views",
+    time: "10 minutes ago",
+  },
+  {
+    imgUrls: ["/houses/a.avif"],
+    title: "Feel at Home Instantly (Book This Cozy Stay Today)",
+    businessName: "HouseRent",
+    views: "1.2K views",
+    time: "10 minutes ago",
   },
 ];

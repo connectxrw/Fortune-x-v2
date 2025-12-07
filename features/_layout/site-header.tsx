@@ -2,8 +2,10 @@ import { BellIcon, SearchIcon } from "lucide-react";
 import Link from "next/link";
 import { Suspense } from "react";
 import { Button } from "@/components/ui/button";
+import { homeFilters } from "@/config/data";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
+import FilterBtns from "../home/filter-btns";
 import { AddNewTop } from "./add-new";
 import { MenuSheet } from "./menu-sheet";
 import SearchTop from "./search-top";
@@ -49,6 +51,11 @@ export default function SiteHeader() {
           </Button>
           <UserPopover />
         </div>
+      </div>
+      <div className="container w-full overflow-hidden pt-6">
+        <Suspense>
+          <FilterBtns filters={homeFilters} />
+        </Suspense>
       </div>
     </header>
   );
