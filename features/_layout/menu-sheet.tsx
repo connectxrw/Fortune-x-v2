@@ -48,7 +48,7 @@ export function MenuSheet() {
         </ScrollArea>
         <SheetFooter>
           <Button asChild variant={"secondary"}>
-            <Link href="/waiting-list">Join Waiting List</Link>
+            <Link href="/">Join Waiting List</Link>
           </Button>
         </SheetFooter>
       </SheetContent>

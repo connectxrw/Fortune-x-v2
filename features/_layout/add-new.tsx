@@ -17,7 +17,7 @@ export function AddNewTop() {
         disabled={isLoading}
         variant={"secondary"}
       >
-        <Link className="flex items-center gap-2 font-medium" href="/sign-in">
+        <Link className="flex items-center gap-2 font-medium" href="/">
           <PlusIcon className="size-6" />
           <span>Create</span>
         </Link>
