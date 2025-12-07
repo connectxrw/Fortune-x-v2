@@ -13,7 +13,7 @@ import UserPopover from "./user-popover";
 
 export default function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 bg-background/95 py-3 backdrop-blur-lg supports-backdrop-filter:bg-background/50 md:py-4">
+    <header className="sticky top-0 z-50 bg-background/95 py-2 backdrop-blur-lg supports-backdrop-filter:bg-background/50 md:py-2">
       <div
         className={cn("flex w-full items-center justify-between px-2 md:px-5")}
       >
@@ -52,7 +52,7 @@ export default function SiteHeader() {
           <UserPopover />
         </div>
       </div>
-      <div className="container w-full overflow-hidden pt-6">
+      <div className="container w-full overflow-hidden pt-5">
         <Suspense>
           <FilterBtns filters={homeFilters} />
         </Suspense>

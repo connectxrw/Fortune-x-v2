@@ -18,7 +18,7 @@ export default function FilterBtns({
   const onClear = () => setSearchParams({ type: "all" });
 
   return (
-    <div className="relative px-5">
+    <div className="relative lg:px-5">
       <Carousel
         className="flex w-full items-center justify-between"
         opts={{

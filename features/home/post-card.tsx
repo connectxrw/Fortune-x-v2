@@ -1,9 +1,7 @@
-import { EllipsisVerticalIcon } from "lucide-react";
 import Image from "next/image";
 import { CarouselDots } from "@/components/custom/carousel-dots";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
@@ -12,10 +10,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import type { Tposts } from "@/types";
+import { PostCardActions } from "./card-actions";
 
 export default function PostCard({ post }: { post: Tposts }) {
   return (
-    <div className="flex flex-col rounded-lg p-2 font-roboto transition-all duration-300 ease-in hover:bg-muted">
+    <div className="flex cursor-pointer flex-col rounded-lg p-2 font-roboto transition-all duration-300 ease-in hover:bg-secondary">
       <Carousel
         className="group relative"
         opts={{
@@ -78,9 +77,7 @@ export default function PostCard({ post }: { post: Tposts }) {
               <p>{post.time}</p>
             </div>
           </div>
-          <Button className="mt-2 rounded-full" size="icon" variant={"ghost"}>
-            <EllipsisVerticalIcon className="size-5" />
-          </Button>
+          <PostCardActions />
         </div>
       </div>
     </div>
