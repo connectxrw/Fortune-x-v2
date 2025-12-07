@@ -72,7 +72,7 @@ export default async function ViewPost(params: PageProps<"/view">) {
         <div className="flex w-full items-center justify-between gap-6 lg:justify-start">
           <Link
             className="flex items-center gap-3"
-            href={`/${post.businessHandle}`}
+            href={`/p/${post.businessHandle}`}
             title={post.businessName}
           >
             <Avatar className="size-9 md:size-10">

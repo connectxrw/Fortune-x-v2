@@ -2,27 +2,30 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 import NavItem from "./nav-item";
 
-export default async function PageNavs(props: LayoutProps<"/[handle]">) {
+export default async function PageNavs(props: LayoutProps<"/p/[handle]">) {
   const { handle } = await props.params;
+  if (!handle) {
+    return null;
+  }
   // on url handle in /@handle i want handle only
   const handleOnly = handle.replace("%40", "");
 
   const navs = [
     {
       label: "Home",
-      href: `/@${handleOnly}`,
+      href: `/p/@${handleOnly}`,
     },
     {
       label: "Posts",
-      href: `/@${handleOnly}/posts`,
+      href: `/p/@${handleOnly}/posts`,
     },
     {
       label: "About",
-      href: `/@${handleOnly}/about`,
+      href: `/p/@${handleOnly}/about`,
     },
     {
       label: "Contact",
-      href: `/@${handleOnly}/contact`,
+      href: `/p/@${handleOnly}/contact`,
     },
   ];
 

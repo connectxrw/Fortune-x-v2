@@ -1,6 +1,3 @@
-import { Suspense } from "react";
-import PageNavs from "@/features/handle/page-navs";
-import PageTop from "@/features/handle/page-top";
 import { SidebarProvider } from "@/components/ui/sidebar";
 
 export default function Layout(props: LayoutProps<"/">) {
