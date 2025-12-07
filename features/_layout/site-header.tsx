@@ -52,11 +52,9 @@ export default function SiteHeader() {
           <UserPopover />
         </div>
       </div>
-      <div className="container w-full overflow-hidden pt-5">
-        <Suspense>
-          <FilterBtns filters={homeFilters} />
-        </Suspense>
-      </div>
+      <Suspense>
+        <FilterBtns filters={homeFilters} />
+      </Suspense>
     </header>
   );
 }

@@ -30,7 +30,7 @@ export function CarouselDots() {
         <button
           className={cn(
             "size-1.5 rounded-full transition-all",
-            i === selectedIndex ? "bg-primary" : "bg-primary/40"
+            i === selectedIndex ? "bg-white" : "bg-black/40"
           )}
           key={i}
           onClick={() => api?.scrollTo(i)}
