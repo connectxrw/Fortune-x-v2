@@ -15,4 +15,4 @@ export const useFilters = (options: Options = {}) =>
     shallow: false,
   });
 
-export const getAiLinks = createTypedLink("/ai", searchParams);
+export const getAiLinks = createTypedLink("/", searchParams);

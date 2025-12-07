@@ -32,13 +32,13 @@ export function AddNewTop() {
         className="hidden rounded-full md:flex"
         variant={"secondary"}
       >
-        <Link href="/business/new">
+        <Link href="/">
           <PlusIcon className="size-6" />
           <span>Create</span>
         </Link>
       </Button>
       <Button asChild className="rounded-full md:hidden" variant={"ghost"}>
-        <Link href="/business/new">
+        <Link href="/">
           <PlusIcon className="size-6" />
         </Link>
       </Button>
