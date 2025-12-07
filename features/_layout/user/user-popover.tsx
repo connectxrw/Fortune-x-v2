@@ -2,13 +2,9 @@
 
 import {
   CircleQuestionMarkIcon,
-  GlobeIcon,
-  KeyboardIcon,
-  LanguagesIcon,
   LogInIcon,
   LogOutIcon,
   MessageSquareShareIcon,
-  MoonIcon,
   SettingsIcon,
   SquareUserIcon,
   UserIcon,
@@ -25,6 +21,10 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
 import profile from "@/public/profile.svg";
+import { SelectAppearence } from "./appearence";
+import { KeyboardShortcuts } from "./keyoard";
+import { SelectLanguage } from "./lang";
+import { SelectLocation } from "./location";
 
 export default function UserPopover() {
   const isAuthenticated = true;
@@ -76,7 +76,7 @@ function AuthenticatedUserPopover() {
 
       <PopoverContent className="mr-6 w-72 rounded-xl border border-muted p-0 shadow-lg dark:bg-black">
         {/* User Profile Section */}
-        <Link className="flex gap-3 p-3" href="/profile">
+        <Link className="flex gap-3 p-3" href="/">
           <Avatar className="size-10">
             <AvatarImage
               alt={user.name || "User"}
@@ -167,22 +167,10 @@ function UnauthenticatedUserPopover() {
 function PublicUserNavs() {
   return (
     <div className="py-2">
-      <div className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
-        <MoonIcon className="size-5 text-muted-foreground" />
-        <span>Appearence: Device theme</span>
-      </div>
-      <div className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
-        <LanguagesIcon className="size-5 text-muted-foreground" />
-        <span>Display Language: English</span>
-      </div>
-      <div className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
-        <GlobeIcon className="size-5 text-muted-foreground" />
-        <span>Location: Rwanda</span>
-      </div>
-      <div className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
-        <KeyboardIcon className="size-5 text-muted-foreground" />
-        <span>Keyboard Shortcuts</span>
-      </div>
+      <SelectAppearence />
+      <SelectLanguage />
+      <SelectLocation />
+      <KeyboardShortcuts />
     </div>
   );
 }

@@ -9,7 +9,7 @@ import FilterBtns from "../home/filter-btns";
 import { AddNewTop } from "./add-new";
 import { MenuSheet } from "./menu-sheet";
 import SearchTop from "./search-top";
-import UserPopover from "./user-popover";
+import UserPopover from "./user/user-popover";
 
 export default function SiteHeader() {
   return (

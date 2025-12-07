@@ -5,7 +5,6 @@ export default function WebLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative flex min-h-svh flex-col bg-background dark:bg-black">
       <SiteHeader />
-
       <main className="relative flex min-h-svh flex-1 flex-col">
         {children}
       </main>
