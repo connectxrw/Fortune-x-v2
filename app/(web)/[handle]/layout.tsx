@@ -8,9 +8,9 @@ export default function Layout(props: LayoutProps<"/[handle]">) {
       <div className="flex flex-col gap-5">
         <PageTop />
         <Suspense>
-          <PageNavs />
+          <PageNavs {...props} />
         </Suspense>
-        {props.children}
+        <main className="min-h-[500px]">{props.children}</main>
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ export default function FilterBtns({
         pathname !== "/" && "hidden"
       )}
     >
-      <div className={cn("relative lg:px-5")}>
+      <div className={cn("relative ")}>
         <Carousel
           className="flex w-full items-center justify-between"
           opts={{

@@ -1,29 +1,28 @@
-"use client";
-
-import type { Route } from "next";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
+import NavItem from "./nav-item";
 
-export default function PageNavs() {
-  const pathname = usePathname();
+export default async function PageNavs(props: LayoutProps<"/[handle]">) {
+  const { handle } = await props.params;
+  // on url handle in /@handle i want handle only
+  const handleOnly = handle.replace("%40", "");
+
   const navs = [
     {
       label: "Home",
-      href: "/@bistro",
+      href: `/@${handleOnly}`,
     },
     {
       label: "Posts",
-      href: "/@bistro/posts",
+      href: `/@${handleOnly}/posts`,
     },
     {
       label: "About",
-      href: "/@bistro/about",
+      href: `/@${handleOnly}/about`,
     },
     {
       label: "Contact",
-      href: "/@bistro/contact",
+      href: `/@${handleOnly}/contact`,
     },
   ];
 
@@ -37,48 +36,12 @@ export default function PageNavs() {
         <ScrollArea className="w-screen overflow-hidden lg:w-full">
           <div className="mx-auto flex w-full items-center gap-4">
             {navs.map((nav) => (
-              <NavItem
-                href={nav.href}
-                key={nav.href}
-                label={nav.label}
-                pathname={pathname}
-              />
+              <NavItem href={nav.href} key={nav.href} label={nav.label} />
             ))}
           </div>
           <ScrollBar className="h-0 w-0" orientation="horizontal" />
         </ScrollArea>
       </div>
     </nav>
-  );
-}
-
-function NavItem({
-  pathname,
-  href,
-  label,
-}: {
-  pathname: string;
-  href: string;
-  label: string;
-}) {
-  return (
-    <Link
-      className={cn(
-        "flex h-11 items-center border-b-2",
-        pathname === href
-          ? "border-primary"
-          : "border-transparent hover:border-primary/60"
-      )}
-      href={href as Route}
-    >
-      <span
-        className={cn(
-          "group relative px-1 font-medium text-[16px] leading-5.5",
-          pathname === href ? "text-primary" : "text-primary/80"
-        )}
-      >
-        {label}
-      </span>
-    </Link>
   );
 }

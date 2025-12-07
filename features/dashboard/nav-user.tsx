@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/sidebar";
 import { SelectAppearence } from "../_layout/user/appearence";
 import { SelectLanguage } from "../_layout/user/lang";
+import Link from "next/link";
 
 export function NavUser({
   user,
@@ -89,10 +90,12 @@ export function NavUser({
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
-              <DropdownMenuItem className="rounded-none px-3 py-2">
-                <HouseIcon className="size-5 text-muted-foreground" />
-                Home
-              </DropdownMenuItem>
+              <Link href="/">
+                <DropdownMenuItem className="rounded-none px-3 py-2">
+                  <HouseIcon className="size-5 text-muted-foreground" />
+                  Home
+                </DropdownMenuItem>
+              </Link>
               <DropdownMenuItem className="rounded-none px-3 py-2">
                 <LogOutIcon className="size-5 text-muted-foreground" />
                 Log out
