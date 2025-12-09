@@ -14,7 +14,7 @@ const data = {
   user: {
     name: "shadcn",
     email: "m@example.com",
-    avatar: "https://github.com/RobinMalfait.png",
+    avatar: "/profile.svg",
   },
   navMain: [
     {
@@ -80,7 +80,6 @@ import {
   SearchIcon,
   SettingsIcon,
 } from "lucide-react";
-import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { NavMain } from "./nav-main";
@@ -95,7 +94,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem className="flex items-center gap-2">
             <SidebarMenuButton size="lg">
               <Avatar className="size-8 rounded-lg">
-                <AvatarImage src="https://github.com/RobinMalfait.png" />
+                <AvatarImage src="/profile.svg" />
                 <AvatarFallback>R</AvatarFallback>
               </Avatar>
               <span className="font-semibold text-base">Acme Inc.</span>

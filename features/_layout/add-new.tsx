@@ -15,7 +15,7 @@ export function AddNewTop() {
         asChild
         className="rounded-full lg:flex"
         disabled={isLoading}
-        variant={"secondary"}
+        // variant={"secondary"}
       >
         <Link className="flex items-center gap-2 font-medium" href="/">
           <PlusIcon className="size-6" />
@@ -27,13 +27,9 @@ export function AddNewTop() {
 
   return (
     <>
-      <Button
-        asChild
-        className="hidden rounded-full md:flex"
-        variant={"secondary"}
-      >
+      <Button asChild className="hidden rounded-full md:flex">
         <Link href="/">
-          <PlusIcon className="size-6" />
+          <PlusIcon />
           <span>Create</span>
         </Link>
       </Button>
