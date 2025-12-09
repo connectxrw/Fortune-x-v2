@@ -17,49 +17,50 @@ import { PostCardActions } from "./card-actions";
 export default function PostCard({ post }: { post: Tpost }) {
   return (
     <div className="flex cursor-pointer flex-col rounded-lg font-roboto transition-all duration-300 ease-in hover:bg-secondary lg:p-2">
-      <Carousel
-        className="group -mx-3.5 relative aspect-video h-full w-full bg-muted lg:mx-0"
-        opts={{
-          loop: true,
-          dragFree: true,
-        }}
-      >
-        <CarouselContent>
-          {post.imgUrls.map((image) => (
-            <CarouselItem key={image}>
-              <Link href={`/view?v=${post.slug}`}>
-                <AspectRatio
-                  className="overflow-hidden lg:rounded-lg"
-                  ratio={16 / 9}
-                >
-                  <Image
-                    alt="my image"
-                    className="h-full w-full object-cover transition-all duration-300 ease-in group-hover:scale-105 lg:rounded-lg"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    src={image}
-                  />
-                </AspectRatio>
-              </Link>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
+      <div className="-mx-3.5 lg:mx-0">
+        <Carousel
+          className="group relative aspect-video h-full w-full bg-muted"
+          opts={{
+            loop: true,
+            dragFree: true,
+          }}
+        >
+          <CarouselContent>
+            {post.imgUrls.map((image) => (
+              <CarouselItem key={image}>
+                <Link href={`/view?v=${post.slug}`}>
+                  <AspectRatio
+                    className="overflow-hidden lg:rounded-lg"
+                    ratio={16 / 9}
+                  >
+                    <Image
+                      alt="my image"
+                      className="h-full w-full object-cover transition-all duration-300 ease-in group-hover:scale-105 lg:rounded-lg"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      src={image}
+                    />
+                  </AspectRatio>
+                </Link>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
 
-        {/* Dots under carousel */}
-        {post.imgUrls.length > 1 && (
-          <>
-            {/* Previous and Next buttons on center of the carousel */}
-            <div className="absolute top-1/2 hidden w-full justify-between group-hover:flex">
-              <CarouselPrevious className="absolute left-2 bg-transparent text-white" />
-              <CarouselNext className="absolute right-2 bg-transparent text-white" />
-            </div>
-            <div className="-translate-x-1/2 absolute bottom-2 left-1/2">
-              <CarouselDots />
-            </div>
-          </>
-        )}
-      </Carousel>
-
+          {/* Dots under carousel */}
+          {post.imgUrls.length > 1 && (
+            <>
+              {/* Previous and Next buttons on center of the carousel */}
+              <div className="absolute top-1/2 hidden w-full justify-between group-hover:flex">
+                <CarouselPrevious className="absolute left-2 bg-transparent text-white" />
+                <CarouselNext className="absolute right-2 bg-transparent text-white" />
+              </div>
+              <div className="-translate-x-1/2 absolute bottom-2 left-1/2">
+                <CarouselDots />
+              </div>
+            </>
+          )}
+        </Carousel>
+      </div>
       <div className="flex gap-3">
         <Avatar className="mt-3 size-9">
           <AvatarImage src="/profile.svg" />
