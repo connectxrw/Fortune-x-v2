@@ -45,7 +45,7 @@ function AuthenticatedUserPopover() {
   const user = {
     name: "John Doe",
     email: "john.doe@example.com",
-    image: "https://github.com/leconstantin.png",
+    image: profile.src,
   };
 
   if (!user) return null;

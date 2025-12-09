@@ -30,8 +30,6 @@ export default function OtherPost({ post }: { post: Tpost }) {
           </Link>
           <p className="text-muted-foreground text-xs">{post.businessName}</p>
           <div className="flex items-center gap-1 text-muted-foreground text-xs">
-            <p>{post.views} views</p>
-            <p>•</p>
             <p>{post.time}</p>
           </div>
         </div>

@@ -59,7 +59,7 @@ export default function MyPostCard({ post }: { post: Tpost }) {
       </Link>
 
       <div className="flex w-full justify-between gap-3">
-        <div className="mt-3 space-y-3">
+        <div className="mt-3 space-y-2">
           <h3
             className="line-clamp-2 font-medium text-[16px] capitalize leading-5.5"
             title={post.title}
@@ -67,8 +67,6 @@ export default function MyPostCard({ post }: { post: Tpost }) {
             {post.title}
           </h3>
           <div className="flex items-center gap-1 text-muted-foreground text-sm">
-            <p>{post.views} views</p>
-            <p>•</p>
             <p>{post.time}</p>
           </div>
         </div>

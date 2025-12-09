@@ -14,7 +14,6 @@ export default function PostDetails({
         <CollapsibleTrigger className="w-full cursor-pointer">
           <div className="flex w-full items-center justify-between gap-3 text-sm">
             <div className="flex items-center gap-4">
-              <p>897 Views</p>
               <p>Oct29, 2025</p>
             </div>
             <p>See more...</p>

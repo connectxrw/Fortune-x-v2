@@ -60,7 +60,7 @@ export default function PostCard({ post }: { post: Tpost }) {
       </Link>
       <div className="flex gap-3">
         <Avatar className="mt-3 size-9">
-          <AvatarImage src="https://github.com/leconstantin.png" />
+          <AvatarImage src="/profile.svg" />
           <AvatarFallback>
             {post.businessName.charAt(0).toUpperCase()}
           </AvatarFallback>
@@ -73,10 +73,10 @@ export default function PostCard({ post }: { post: Tpost }) {
             >
               {post.title}
             </h3>
-            <p className="text-muted-foreground text-sm">{post.businessName}</p>
-            <div className="flex items-center gap-1 text-muted-foreground text-sm">
-              <p>{post.views} views</p>
-              <p>•</p>
+            <div className="flex flex-col items-center justify-between gap-1 pt-2 text-muted-foreground text-sm md:flex-row">
+              <p className="text-muted-foreground text-sm">
+                {post.businessName}
+              </p>
               <p>{post.time}</p>
             </div>
           </div>
