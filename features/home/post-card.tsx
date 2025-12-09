@@ -1,3 +1,4 @@
+import { ClockIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { CarouselDots } from "@/components/custom/carousel-dots";
@@ -18,7 +19,7 @@ export default function PostCard({ post }: { post: Tpost }) {
     <div className="flex cursor-pointer flex-col rounded-lg font-roboto transition-all duration-300 ease-in hover:bg-secondary lg:p-2">
       <Link href={`/view?v=${post.slug}`}>
         <Carousel
-          className="group -mx-3.5 relative lg:mx-0"
+          className="group -mx-3.5 relative aspect-video h-full w-full bg-muted lg:mx-0"
           opts={{
             loop: true,
             dragFree: true,
@@ -77,7 +78,10 @@ export default function PostCard({ post }: { post: Tpost }) {
               <p className="text-muted-foreground text-sm">
                 {post.businessName}
               </p>
-              <p>{post.time}</p>
+              <div className="flex items-center gap-1">
+                <ClockIcon className="size-4" />
+                <span>{post.time}</span>
+              </div>
             </div>
           </div>
           <PostCardActions />

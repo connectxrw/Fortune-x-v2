@@ -13,7 +13,7 @@ import UserPopover from "./user/user-popover";
 
 export default function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 bg-background/95 py-2 backdrop-blur-lg supports-backdrop-filter:bg-background/50 md:py-2">
+    <header className="sticky top-0 z-50 bg-background/95 py-2 backdrop-blur-lg supports-backdrop-filter:bg-background/80 md:py-2">
       <div
         className={cn("flex w-full items-center justify-between px-2 md:px-5")}
       >
