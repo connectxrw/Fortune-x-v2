@@ -12,7 +12,7 @@ export default function OtherPost({ post }: { post: Tpost }) {
       >
         <Image
           alt="Photo by Drew Beamer"
-          className="aspect-video rounded-lg object-cover"
+          className="aspect-video h-full w-full rounded-lg object-cover"
           height={95}
           src={post.imgUrls[0]}
           width={168}

@@ -15,10 +15,10 @@ import { PostCardActions } from "./card-actions";
 
 export default function PostCard({ post }: { post: Tpost }) {
   return (
-    <div className="flex cursor-pointer flex-col rounded-lg p-2 font-roboto transition-all duration-300 ease-in hover:bg-secondary">
+    <div className="flex cursor-pointer flex-col rounded-lg font-roboto transition-all duration-300 ease-in hover:bg-secondary lg:p-2">
       <Link href={`/view?v=${post.slug}`}>
         <Carousel
-          className="group relative"
+          className="group -mx-3.5 relative lg:mx-0"
           opts={{
             loop: true,
             dragFree: true,
@@ -28,12 +28,12 @@ export default function PostCard({ post }: { post: Tpost }) {
             {post.imgUrls.map((image) => (
               <CarouselItem key={image}>
                 <AspectRatio
-                  className="overflow-hidden rounded-lg"
+                  className="overflow-hidden lg:rounded-lg"
                   ratio={16 / 9}
                 >
                   <Image
                     alt="my image"
-                    className="h-full w-full rounded-lg object-cover transition-all duration-300 ease-in group-hover:scale-105"
+                    className="h-full w-full object-cover transition-all duration-300 ease-in group-hover:scale-105 lg:rounded-lg"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     src={image}
@@ -73,7 +73,7 @@ export default function PostCard({ post }: { post: Tpost }) {
             >
               {post.title}
             </h3>
-            <div className="flex flex-col items-center justify-between gap-1 pt-2 text-muted-foreground text-sm md:flex-row">
+            <div className="flex items-center justify-between gap-1 pt-2 text-muted-foreground text-sm">
               <p className="text-muted-foreground text-sm">
                 {post.businessName}
               </p>

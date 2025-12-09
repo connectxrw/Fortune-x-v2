@@ -28,7 +28,7 @@ export default async function ViewPost(params: PageProps<"/view">) {
   return (
     <div className="flex flex-col gap-3">
       <Carousel
-        className="group relative"
+        className="group -mx-3.5 relative lg:mx-0"
         opts={{
           loop: true,
           dragFree: true,
@@ -38,12 +38,12 @@ export default async function ViewPost(params: PageProps<"/view">) {
           {post.imgUrls.map((image) => (
             <CarouselItem key={image}>
               <AspectRatio
-                className="overflow-hidden rounded-lg"
+                className="overflow-hidden lg:rounded-lg"
                 ratio={16 / 9}
               >
                 <Image
                   alt="my image"
-                  className="h-full w-full rounded-lg object-cover transition-all duration-300 ease-in group-hover:scale-105"
+                  className="h-full w-full object-cover transition-all duration-300 ease-in group-hover:scale-105 lg:rounded-lg"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   src={image}
@@ -76,7 +76,7 @@ export default async function ViewPost(params: PageProps<"/view">) {
             title={post.businessName}
           >
             <Avatar className="size-9 md:size-10">
-              <AvatarImage src="https://github.com/leconstantin.png" />
+              <AvatarImage src="/profile.svg" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
             <div>

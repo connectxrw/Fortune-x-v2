@@ -32,10 +32,10 @@ export default async function PageNavs(props: LayoutProps<"/p/[handle]">) {
   return (
     <nav
       className={cn(
-        "sticky top-15 w-full gap-4 border-border border-b bg-transparent"
+        "sticky top-15 z-20 w-full gap-4 border-border border-b bg-background"
       )}
     >
-      <div className="flex items-center gap-4 transition-all duration-1000 ease-in">
+      <div className="container flex items-center gap-4 transition-all duration-1000 ease-in">
         <ScrollArea className="w-screen overflow-hidden lg:w-full">
           <div className="mx-auto flex w-full items-center gap-4">
             {navs.map((nav) => (

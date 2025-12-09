@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 export default function PageTop() {
   return (
-    <div>
+    <div className="container">
       <AspectRatio className="overflow-hidden rounded-lg" ratio={535 / 86}>
         <Image
           alt="my image"
