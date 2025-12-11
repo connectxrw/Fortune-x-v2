@@ -16,70 +16,9 @@ const data = {
     email: "m@example.com",
     avatar: "/profile.svg",
   },
-  navMain: [
-    {
-      title: "Dashboard",
-      url: "#",
-      icon: LayoutDashboardIcon,
-    },
-    {
-      title: "Posts",
-      url: "#",
-      icon: ClapperboardIcon,
-    },
-    {
-      title: "Customization",
-      url: "#",
-      icon: PenToolIcon,
-    },
-    {
-      title: "Notifications",
-      url: "#",
-      icon: BellIcon,
-    },
-    {
-      title: "Insights",
-      url: "#",
-      icon: ChartBarIcon,
-    },
-  ],
-
-  navSecondary: [
-    {
-      title: "View public page",
-      url: "#",
-      icon: ExternalLinkIcon,
-    },
-    {
-      title: "Copy public page link",
-      url: "#",
-      icon: CopyIcon,
-    },
-    {
-      title: "Settings",
-      url: "#",
-      icon: SettingsIcon,
-    },
-    {
-      title: "Send Feedback",
-      url: "#",
-      icon: MessageSquareShareIcon,
-    },
-  ],
 };
 
-import {
-  BellIcon,
-  ChartBarIcon,
-  ClapperboardIcon,
-  CopyIcon,
-  ExternalLinkIcon,
-  LayoutDashboardIcon,
-  MessageSquareShareIcon,
-  PenToolIcon,
-  SearchIcon,
-  SettingsIcon,
-} from "lucide-react";
+import { SearchIcon } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { NavMain } from "./nav-main";
@@ -111,8 +50,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
-        <NavSecondary className="mt-auto" items={data.navSecondary} />
+        <NavMain />
+        <NavSecondary />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />

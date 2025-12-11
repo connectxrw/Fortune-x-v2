@@ -1,7 +1,12 @@
 "use client";
 
-import type { LucideProps } from "lucide-react";
-import type { ForwardRefExoticComponent, RefAttributes } from "react";
+import {
+  CopyIcon,
+  ExternalLinkIcon,
+  MessageSquareShareIcon,
+  SettingsIcon,
+} from "lucide-react";
+import Link from "next/link";
 import {
   SidebarGroup,
   SidebarGroupContent,
@@ -10,32 +15,37 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
-export function NavSecondary({
-  items,
-  ...props
-}: {
-  items: {
-    title: string;
-    url: string;
-    icon?: ForwardRefExoticComponent<
-      Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
-    >;
-  }[];
-} & React.ComponentPropsWithoutRef<typeof SidebarGroup>) {
+export function NavSecondary() {
   return (
-    <SidebarGroup {...props}>
+    <SidebarGroup className="mt-auto">
       <SidebarGroupContent>
         <SidebarMenu>
-          {items.map((item) => (
-            <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton asChild>
-                <a href={item.url}>
-                  {item.icon && <item.icon />}
-                  <span>{item.title}</span>
-                </a>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          ))}
+          <SidebarMenuItem>
+            <SidebarMenuButton>
+              <ExternalLinkIcon />
+              <span>View public page</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarMenuButton>
+              <CopyIcon />
+              <span>Copy public page link</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarMenuButton asChild>
+              <Link href="/page">
+                <SettingsIcon />
+                <span>Settings</span>
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarMenuButton>
+              <MessageSquareShareIcon />
+              <span>Send Feedback</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
         </SidebarMenu>
       </SidebarGroupContent>
     </SidebarGroup>
