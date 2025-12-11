@@ -13,7 +13,7 @@ export default function CustomizationPage() {
   return (
     <>
       <SiteHeader title="Customization" />
-      <div className="@container/main flex flex-col gap-10 px-4 lg:p-6 lg:pb-10">
+      <div className="@container/main flex flex-col gap-10 px-4 py-6 lg:p-6 lg:pb-10">
         <BannerImage />
         <PagePicture />
         <BusinessName />

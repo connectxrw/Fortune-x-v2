@@ -6,28 +6,32 @@ import { usePathname } from "next/navigation";
 import { Separator } from "@/components/ui/separator";
 import { menuNavs, otherNavs, youNavs } from "@/config/data";
 import { cn } from "@/lib/utils";
+import { SendFeedbackDialog } from "./feedback";
 
 export default function MenuNavs() {
   const pathname = usePathname();
   return (
     <div className="flex flex-col gap-3">
-      <Link
-        className={cn(
-          "flex items-center gap-1 rounded-lg p-2 text-primary/90 text-sm hover:bg-muted/70",
-          pathname === "/" && "mx-3 bg-muted/70"
-        )}
-        href={"/"}
-      >
-        <HouseIcon className={cn("size-4 text-muted-foreground")} />
-        <span
+      <div className="px-3">
+        <Link
           className={cn(
-            "font-normal text-sm",
-            pathname === "/" && "font-medium text-primary"
+            "flex items-center gap-1 rounded-lg p-2 text-primary/90 text-sm hover:bg-muted/70",
+            pathname === "/" && "mx-3 bg-muted/70"
           )}
+          href={"/"}
         >
-          Home
-        </span>
-      </Link>
+          <HouseIcon className={cn("size-5 text-muted-foreground")} />
+          <span
+            className={cn(
+              "font-normal text-sm",
+              pathname === "/" && "font-medium text-primary"
+            )}
+          >
+            Home
+          </span>
+        </Link>
+      </div>
+
       <Separator />
       <MenuCategories pathname={pathname} />
       <Separator />
@@ -50,7 +54,7 @@ function MenuCategories({ pathname }: { pathname: string }) {
         <span className={cn("block font-medium text-[16px] leading-5.5")}>
           Categories
         </span>
-        <ChevronRightIcon className={cn("size-4 text-muted-foreground")} />
+        <ChevronRightIcon className={cn("size-5 text-muted-foreground")} />
       </Link>
       {menuNavs.map((nav) => (
         <div key={nav.title}>
@@ -62,7 +66,7 @@ function MenuCategories({ pathname }: { pathname: string }) {
             )}
             href={nav.link as Route}
           >
-            <nav.icon className={cn("size-6 text-muted-foreground")} />
+            <nav.icon className={cn("size-5 text-muted-foreground")} />
             <span
               className={cn(
                 "font-normal text-sm",
@@ -89,7 +93,7 @@ function MenuYou({ pathname }: { pathname: string }) {
         <span className={cn("block font-medium text-[16px] leading-5.5")}>
           You
         </span>
-        <ChevronRightIcon className={cn("size-4 text-muted-foreground")} />
+        <ChevronRightIcon className={cn("size-5 text-muted-foreground")} />
       </Link>
       {youNavs.map((nav) => (
         <div key={nav.title}>
@@ -101,7 +105,7 @@ function MenuYou({ pathname }: { pathname: string }) {
             )}
             href={nav.link as Route}
           >
-            <nav.icon className={cn("size-6 text-muted-foreground")} />
+            <nav.icon className={cn("size-5 text-muted-foreground")} />
             <span
               className={cn(
                 "font-normal text-sm",
@@ -130,7 +134,7 @@ function MenuOther({ pathname }: { pathname: string }) {
             )}
             href={nav.link as Route}
           >
-            <nav.icon className={cn("size-6 text-muted-foreground")} />
+            <nav.icon className={cn("size-5 text-muted-foreground")} />
             <span
               className={cn(
                 "font-normal text-sm",
@@ -142,6 +146,7 @@ function MenuOther({ pathname }: { pathname: string }) {
           </Link>
         </div>
       ))}
+      <SendFeedbackDialog className="rounded-lg px-2" />
     </div>
   );
 }

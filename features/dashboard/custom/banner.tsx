@@ -8,7 +8,7 @@ export default function BannerImage() {
       <p className="text-muted-foreground text-sm">
         This image will appear across the top of your page
       </p>
-      <div className="flex gap-8 pt-6">
+      <div className="flex flex-col gap-8 pt-6 lg:flex-row">
         <div className="h-[160px] w-full max-w-[290px] overflow-hidden bg-muted p-4 lg:rounded-lg">
           <Image
             alt="my image"

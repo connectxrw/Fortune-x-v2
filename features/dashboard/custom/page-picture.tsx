@@ -8,7 +8,7 @@ export default function PagePicture() {
         Your profile picture will appear where your channel is presented on
         FortuneX.
       </p>
-      <div className="flex gap-8 pt-6">
+      <div className="flex flex-col gap-8 pt-6 lg:flex-row">
         <div className="flex h-[160px] w-full max-w-[290px] items-center justify-center overflow-hidden bg-muted p-4 lg:rounded-lg">
           <Avatar className="size-28">
             <AvatarImage src="/profile.svg" />

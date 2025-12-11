@@ -4,7 +4,6 @@ import {
   CircleQuestionMarkIcon,
   LogInIcon,
   LogOutIcon,
-  MessageSquareShareIcon,
   SettingsIcon,
   SquareUserIcon,
   UserIcon,
@@ -21,6 +20,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
 import profile from "@/public/profile.svg";
+import { SendFeedbackDialog } from "../feedback";
 import { SelectAppearence } from "./appearence";
 import { KeyboardShortcuts } from "./keyoard";
 import { SelectLanguage } from "./lang";
@@ -189,10 +189,7 @@ function HelpNavs() {
         <span>Help</span>
       </div>
 
-      <div className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
-        <MessageSquareShareIcon className="size-5 text-muted-foreground" />
-        <span>Send feedback</span>
-      </div>
+      <SendFeedbackDialog />
     </div>
   );
 }

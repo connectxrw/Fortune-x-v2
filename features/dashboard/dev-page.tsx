@@ -18,7 +18,7 @@ export default function DevPage() {
             <UnplugIcon />
           </EmptyMedia>
           <EmptyTitle>Still in Development</EmptyTitle>
-          <EmptyDescription className="text-nowrap">
+          <EmptyDescription>
             This page is still in development. You will be notified when it is
             ready.
           </EmptyDescription>

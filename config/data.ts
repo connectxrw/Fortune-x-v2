@@ -9,7 +9,6 @@ import {
   HouseIcon,
   LandmarkIcon,
   MapIcon,
-  MessageSquareShareIcon,
   Repeat2Icon,
   SettingsIcon,
   ShoppingCartIcon,
@@ -123,13 +122,6 @@ export const otherNavs = [
     title: "Help",
     icon: CircleQuestionMarkIcon,
     link: "/help",
-    active: true,
-  },
-
-  {
-    title: "Send feedback",
-    icon: MessageSquareShareIcon,
-    link: "/send-feedback",
     active: true,
   },
 ];
