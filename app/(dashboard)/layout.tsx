@@ -1,4 +1,5 @@
-import { SidebarProvider } from "@/components/ui/sidebar";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/features/dashboard/app-sidebar";
 
 export default function Layout(props: LayoutProps<"/">) {
   return (
@@ -10,7 +11,8 @@ export default function Layout(props: LayoutProps<"/">) {
         } as React.CSSProperties
       }
     >
-      {props.children}
+      <AppSidebar variant="inset" />
+      <SidebarInset>{props.children}</SidebarInset>
     </SidebarProvider>
   );
 }

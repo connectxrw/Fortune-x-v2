@@ -201,6 +201,11 @@ export const homeFilters = [
     slug: "gvt-services",
   },
 ];
+export const postFilters = [
+  { label: "Latest", slug: "latest" },
+  { label: "Popular", slug: "popular" },
+  { label: "Oldest", slug: "oldest" },
+];
 
 export const homePosts: Tpost[] = [
   {
