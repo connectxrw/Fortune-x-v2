@@ -19,7 +19,7 @@ export function AddNewTop() {
       >
         <Link className="flex items-center gap-2 font-medium" href="/">
           <PlusIcon className="size-6" />
-          <span>Create</span>
+          <span>Post</span>
         </Link>
       </Button>
     );
@@ -30,7 +30,7 @@ export function AddNewTop() {
       <Button asChild className="hidden rounded-full md:flex">
         <Link href="/">
           <PlusIcon />
-          <span>Create</span>
+          <span>Post</span>
         </Link>
       </Button>
       <Button asChild className="rounded-full md:hidden" variant={"ghost"}>

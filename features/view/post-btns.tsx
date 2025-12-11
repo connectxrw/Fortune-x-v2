@@ -25,7 +25,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 export default function PostBtns() {
   const isMobile = useIsMobile();
   return (
-    <div className="flex gap-2">
+    <div className="flex w-full gap-2">
       <ButtonGroup>
         <Button
           className="rounded-full"
@@ -91,7 +91,7 @@ export default function PostBtns() {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
-            className="hidden rounded-full md:flex"
+            className="ml-auto hidden rounded-full md:flex"
             size="icon"
             variant="secondary"
           >

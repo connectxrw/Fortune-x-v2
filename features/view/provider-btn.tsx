@@ -23,13 +23,14 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { cn } from "@/lib/utils";
 
 const dropdownItems = [
   { label: "All", icon: BellRingIcon, isActive: true },
   { label: "None", icon: BellOffIcon, isActive: false },
   { label: "Unfollow", icon: UserRoundXIcon, isActive: false },
 ];
-export default function ProviderBtn() {
+export default function ProviderBtn({ className }: { className?: string }) {
   const hasFollowed = false;
   const isMobile = useIsMobile();
 
@@ -42,7 +43,7 @@ export default function ProviderBtn() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+      <DropdownMenuTrigger asChild className={cn(className)}>
         <Button className="rounded-full" variant="secondary">
           <BellIcon />
           <ChevronDownIcon />

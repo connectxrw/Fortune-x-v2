@@ -22,7 +22,7 @@ export default function FilterBtns({
   return (
     <div
       className={cn(
-        "container w-full overflow-hidden pt-5",
+        "container w-full overflow-hidden pt-5 lg:pt-7",
         pathname !== "/" && "hidden"
       )}
     >
