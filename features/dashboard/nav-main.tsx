@@ -1,11 +1,11 @@
 "use client";
 
 import {
-  BellIcon,
   ChartBarIcon,
   ClapperboardIcon,
   LayoutDashboardIcon,
   PenToolIcon,
+  SettingsIcon,
 } from "lucide-react";
 import type { Route } from "next";
 import Link from "next/link";
@@ -34,15 +34,16 @@ const mainNav = [
     url: "/page/customization",
     icon: PenToolIcon,
   },
-  {
-    title: "Notifications",
-    url: "/page/notifications",
-    icon: BellIcon,
-  },
+
   {
     title: "Insights",
     url: "/page/insights",
     icon: ChartBarIcon,
+  },
+  {
+    title: "Settings",
+    url: "/page/settings",
+    icon: SettingsIcon,
   },
 ];
 
