@@ -19,19 +19,19 @@ export function NavSecondary() {
       <SidebarGroupContent>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton>
+            <SidebarMenuButton tooltip="View public page">
               <ExternalLinkIcon />
               <span>View public page</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem>
-            <SidebarMenuButton>
+            <SidebarMenuButton tooltip="Copy public page link">
               <CopyIcon />
               <span>Copy public page link</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem>
-            <SidebarMenuButton>
+            <SidebarMenuButton tooltip="Send Feedback">
               <MessageSquareShareIcon />
               <span>Send Feedback</span>
             </SidebarMenuButton>

@@ -6,47 +6,48 @@ import { useEffect, useState } from "react";
 const testimonials = [
   {
     name: "Aline Mugisha",
-    title: "University of Rwanda • Year 2",
+    title: "Small Business Owner • Kigali",
     content:
-      "Qpaper helped me find past exams for all my modules in minutes. My revision became more focused because I could practice with real questions used before.",
+      "FortuneX helped me create a professional page for my business in minutes. Since I started posting my products and services there, more customers have been reaching out directly.",
     highlighted:
-      "Qpaper helped me find past exams for all my modules in minutes",
-    firstPart: "Qpaper helped me find past exams for all my modules in minutes",
+      "FortuneX helped me create a professional page for my business in minutes",
+    firstPart:
+      "FortuneX helped me create a professional page for my business in minutes",
     secondPart:
-      ". My revision became more focused because I could practice with real questions used before.",
+      ", and after posting my products and services, more customers have been reaching out directly.",
   },
   {
     name: "James Nkusi",
-    title: "High School • S6 PCM Student",
+    title: "Freelance Photographer",
     content:
-      "Before Qpaper, it was hard to get real past papers for national exams. Now everything is organized by year, subject, and type. It boosted my confidence during revision.",
+      "Before FortuneX, it was hard for clients to find my work online. Now I have a clean, organized page where I showcase my photos and redirect people to my booking services.",
     highlighted:
-      "It was hard to get real past papers until I started using Qpaper",
+      "It was hard for clients to find my work until I started using FortuneX",
     firstPart:
-      "It was hard to get real past papers until I started using Qpaper",
+      "It was hard for clients to find my work until I started using FortuneX",
     secondPart:
-      ". Now everything is organized by year, subject, and type, and it boosted my confidence during revision.",
+      ". Now I have a clean, organized page where I showcase my photos and redirect people to my booking services.",
   },
   {
     name: "Grace Umutoni",
-    title: "IPRC Kigali • Level 3 Student",
+    title: "Bistro Owner • Remera",
     content:
-      "Studying became easier once I could access quizzes, midterms, and final exams in one place. Qpaper has saved me hours I used to waste searching in WhatsApp groups.",
-    highlighted:
-      "Qpaper has saved me hours I used to waste searching in WhatsApp groups",
-    firstPart:
-      "Qpaper has saved me hours I used to waste searching in WhatsApp groups",
+      "Managing my online presence became easier once I moved to FortuneX. I can post menus, offers, and updates in one place, and customers quickly find what they need.",
+    highlighted: "FortuneX made managing my online presence so much easier",
+    firstPart: "FortuneX made managing my online presence so much easier",
     secondPart:
-      ". Studying became easier once I could access quizzes, midterms, and final exams in one place.",
+      ". I can now post menus, offers, and updates in one place, and customers quickly find what they need.",
   },
   {
     name: "Samuel Habineza",
-    title: "KIM University • Business Student",
+    title: "Tech Service Provider",
     content:
-      "I no longer stress about finding exam preparation materials. Qpaper gives me reliable past papers anytime, and it’s helping me score higher in my courses.",
-    highlighted: "Qpaper gives me reliable past papers anytime",
-    firstPart: "Qpaper gives me reliable past papers anytime",
-    secondPart: ", and it's helping me score higher in my courses.",
+      "I no longer struggle to promote my services. FortuneX gives me a reliable platform to showcase what I do, redirect customers to my links, and grow my client base faster.",
+    highlighted:
+      "FortuneX gives me a reliable platform to showcase my services",
+    firstPart: "FortuneX gives me a reliable platform to showcase my services",
+    secondPart:
+      ", redirect customers to my links, and grow my client base faster.",
   },
 ];
 

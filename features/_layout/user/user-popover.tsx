@@ -27,7 +27,7 @@ import { SelectLanguage } from "./lang";
 import { SelectLocation } from "./location";
 
 export default function UserPopover() {
-  const isAuthenticated = true;
+  const isAuthenticated = false;
   const isLoading = false;
 
   if (isLoading) {
@@ -150,10 +150,13 @@ function UnauthenticatedUserPopover() {
 
         <Separator />
         <div className="py-2">
-          <div className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
+          <Link
+            className="flex cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary"
+            href="/sign-in"
+          >
             <LogInIcon className="size-5 text-muted-foreground" />
             <span>Sign in</span>
-          </div>
+          </Link>
         </div>
         <Separator />
 

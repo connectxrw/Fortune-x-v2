@@ -31,7 +31,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem className="flex items-center gap-2">
-            <SidebarMenuButton size="lg">
+            <SidebarMenuButton size="lg" tooltip="Company Menu">
               <Avatar className="size-8 rounded-lg">
                 <AvatarImage src="/profile.svg" />
                 <AvatarFallback>R</AvatarFallback>

@@ -6,6 +6,7 @@ import {
   LogOutIcon,
   UserCircleIcon,
 } from "lucide-react";
+import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
@@ -24,7 +25,6 @@ import {
 } from "@/components/ui/sidebar";
 import { SelectAppearence } from "../_layout/user/appearence";
 import { SelectLanguage } from "../_layout/user/lang";
-import Link from "next/link";
 
 export function NavUser({
   user,
@@ -45,6 +45,7 @@ export function NavUser({
             <SidebarMenuButton
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
               size="lg"
+              tooltip="User Menu"
             >
               <Avatar className="size-8 grayscale">
                 <AvatarImage alt={user.name} src={user.avatar} />
