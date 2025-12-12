@@ -24,7 +24,7 @@ export function MenuSheet() {
         </Button>
       </SheetTrigger>
       <SheetContent
-        className="rounded-r-2xl border border-muted lg:max-w-2xs dark:bg-black"
+        className="border border-muted lg:max-w-2xs dark:bg-black"
         side="left"
       >
         <SheetHeader className="pb-0">
