@@ -1,5 +1,5 @@
 "use client";
-import { CompassIcon } from "lucide-react";
+import { CompassIcon, Settings2Icon } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import {
@@ -24,13 +24,13 @@ export default function FilterBtns({
   return (
     <div
       className={cn(
-        "w-full overflow-hidden pt-5 lg:pt-7",
+        "mx-auto w-full 3xl:max-w-screen-4xl max-w-[1400px] overflow-hidden pt-5 lg:pt-7",
         pathname !== "/" && "hidden"
       )}
     >
-      <div className={cn("relative")}>
+      <div className={cn("relative flex items-center justify-between")}>
         <Carousel
-          className="flex w-full items-center justify-between"
+          className="flex w-full items-center gap-1"
           opts={{
             align: "start",
             loop: false,
@@ -69,12 +69,20 @@ export default function FilterBtns({
           </CarouselContent>
           <div
             className={cn(
-              "hidden items-center justify-end px-3 md:flex lg:px-6",
+              "hidden items-center justify-end md:flex",
               filters.length <= 6 && "hidden"
             )}
           >
             <CarouselNext className="relative inset-0 h-8 w-8 translate-x-0 translate-y-0 text-gray-700 dark:bg-none dark:text-gray-300" />
           </div>
+          <Button
+            className="mr-4 ml-auto text-primary/80 lg:mr-6"
+            size="sm"
+            variant="outline"
+          >
+            <Settings2Icon />
+            <span className="hidden lg:block">Filters</span>
+          </Button>
         </Carousel>
       </div>
     </div>
