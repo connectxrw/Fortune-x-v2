@@ -15,7 +15,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { SubFormSchema, type TSubFormSchema } from "@/emails/schema";
-// import { subscribe } from "@/server/subscribe.action";
 
 export default function SubscribeForm() {
   const [submitting, setSubmitting] = useState(false);

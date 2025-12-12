@@ -45,7 +45,7 @@ export default function PostBtns() {
         </Button>
       </ButtonGroup>
       <Button
-        aria-label="Share"
+        aria-label="Order Now"
         className="rounded-full"
         size={isMobile ? "sm" : "default"}
       >
@@ -53,13 +53,22 @@ export default function PostBtns() {
         Order Now
       </Button>
       <Button
-        aria-label="Download"
+        aria-label="Edit"
         className="rounded-full md:hidden"
         size={isMobile ? "sm" : "default"}
         variant="secondary"
       >
         <PenIcon />
         Edit
+      </Button>
+      <Button
+        aria-label="Share"
+        className="rounded-full md:hidden"
+        size={isMobile ? "sm" : "default"}
+        variant="secondary"
+      >
+        <Share2Icon />
+        Share
       </Button>
       <Button
         aria-label="Save"
@@ -70,15 +79,7 @@ export default function PostBtns() {
         <BookmarkIcon />
         Save to bookmarks
       </Button>
-      <Button
-        aria-label="Report"
-        className="rounded-full md:hidden"
-        size={isMobile ? "sm" : "default"}
-        variant="secondary"
-      >
-        <Share2Icon />
-        Share
-      </Button>
+
       <Button
         aria-label="Report"
         className="rounded-full md:hidden"

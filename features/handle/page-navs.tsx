@@ -24,6 +24,10 @@ export default async function PageNavs(props: LayoutProps<"/p/[handle]">) {
       href: `/p/@${handleOnly}/about`,
     },
     {
+      label: "Jobs",
+      href: `/p/@${handleOnly}/jobs`,
+    },
+    {
       label: "Contact",
       href: `/p/@${handleOnly}/contact`,
     },

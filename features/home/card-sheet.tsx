@@ -22,7 +22,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { homePosts } from "@/config/data";
-import MyPostCard from "../handle/my-post-card";
+import PostCard from "../shared/post-card";
 import PostBtns from "../view/post-btns";
 import PostDetails from "../view/post-details";
 import ProviderBtn from "../view/provider-btn";
@@ -106,7 +106,7 @@ export function CardSheet() {
           </div>
           <div className="grid grid-cols-1 gap-y-8 px-2 md:grid-cols-1">
             {other.map((pos) => (
-              <MyPostCard key={pos.title} post={pos} />
+              <PostCard key={pos.title} post={pos} />
             ))}
           </div>
           <SheetFooter>

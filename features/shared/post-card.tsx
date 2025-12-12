@@ -13,7 +13,13 @@ import {
 import type { Tpost } from "@/types";
 import { PostCardActions } from "./card-actions";
 
-export default function PostCard({ post }: { post: Tpost }) {
+export default function PostCard({
+  post,
+  onPage,
+}: {
+  post: Tpost;
+  onPage?: boolean;
+}) {
   return (
     <div className="flex cursor-pointer flex-col rounded-lg font-roboto transition-all duration-300 ease-in hover:bg-secondary md:p-2">
       <div className="-mx-3.5 md:mx-0">
@@ -76,8 +82,12 @@ export default function PostCard({ post }: { post: Tpost }) {
               {post.title}
             </h3>
             <div className="flex items-center gap-2 pt-2 text-muted-foreground text-xs md:text-sm">
-              <p>{post.businessName}</p>
-              <p>.</p>
+              {!onPage && (
+                <>
+                  <p>{post.businessName}</p>
+                  <p>.</p>
+                </>
+              )}
               <p>{post.time}</p>
             </div>
           </div>

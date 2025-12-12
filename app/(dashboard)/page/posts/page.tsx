@@ -6,7 +6,7 @@ import DashboardPostCard from "@/features/dashboard/posts/post-card";
 import { SiteHeader } from "@/features/dashboard/site-header";
 import PostsFilterBtns, {
   PostsFilterBtnsSelect,
-} from "@/features/handle/post-filters";
+} from "@/features/shared/post-filters";
 
 export default function PostPage() {
   return (

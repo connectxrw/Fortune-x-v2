@@ -228,7 +228,7 @@ export const homePosts: Tpost[] = [
     time: "10 minutes ago",
   },
   {
-    imgUrls: ["/houses/a.avif", "/houses/b.avif"],
+    imgUrls: ["/houses/image-6.avif", "/houses/image-3.avif"],
     title: "Feel at Home Instantly (Book This Cozy Stay Today)",
     slug: "feel-at-home-instantly-book-this-cozy-stay-today",
     businessName: "HouseRent",

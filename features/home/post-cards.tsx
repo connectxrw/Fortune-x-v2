@@ -1,5 +1,5 @@
 import { homePosts } from "@/config/data";
-import PostCard from "./post-card";
+import PostCard from "../shared/post-card";
 
 export default function PostCards() {
   return (

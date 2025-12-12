@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Tpost } from "@/types";
-import { PostCardActions } from "../home/card-actions";
+import { PostCardActions } from "../shared/card-actions";
 
 export default function OtherPost({ post }: { post: Tpost }) {
   return (
@@ -28,8 +28,9 @@ export default function OtherPost({ post }: { post: Tpost }) {
           >
             {post.title}
           </Link>
-          <p className="text-muted-foreground text-xs">{post.businessName}</p>
-          <div className="flex items-center gap-1 text-muted-foreground text-xs">
+          <div className="flex items-center gap-2 pt-2 text-muted-foreground text-xs md:text-sm">
+            <p>{post.businessName}</p>
+            <p>.</p>
             <p>{post.time}</p>
           </div>
         </div>

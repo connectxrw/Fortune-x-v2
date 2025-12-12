@@ -9,7 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { MyCardActions } from "@/features/handle/my-card-actions";
+import { PostCardActions } from "@/features/shared/card-actions";
 import type { Tpost } from "@/types";
 
 export default function DashboardPostCard({ post }: { post: Tpost }) {
@@ -70,7 +70,7 @@ export default function DashboardPostCard({ post }: { post: Tpost }) {
             <p>{post.time}</p>
           </div>
         </div>
-        <MyCardActions />
+        <PostCardActions />
       </div>
     </div>
   );

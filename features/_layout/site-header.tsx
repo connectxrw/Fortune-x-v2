@@ -1,16 +1,16 @@
-import { BellIcon, MenuIcon, SearchIcon } from "lucide-react";
+import { BellIcon, MenuIcon } from "lucide-react";
 import Link from "next/link";
 import { Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { homeFilters } from "@/config/data";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import FilterBtns from "../home/filter-btns";
 import { AddNewTop } from "./add-new";
+import FilterBtns from "./filter-btns";
 import { MenuSheet } from "./menu-sheet";
+import { SearchMobileSheet } from "./search-mobile";
 import SearchTop from "./search-top";
 import UserPopover from "./user/user-popover";
-import { SearchMobileSheet } from "./search-mobile";
 
 export default function SiteHeader() {
   return (
@@ -19,7 +19,7 @@ export default function SiteHeader() {
         <div className="flex items-center gap-1 md:gap-3">
           <MenuSheet>
             <Button
-              className="rounded-full hidden lg:flex"
+              className="hidden rounded-full lg:flex"
               size="icon-lg"
               variant={"ghost"}
             >

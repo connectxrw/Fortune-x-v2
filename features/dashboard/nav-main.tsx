@@ -1,11 +1,9 @@
 "use client";
 
 import {
-  ChartBarIcon,
   ClapperboardIcon,
   LayoutDashboardIcon,
   PenToolIcon,
-  SettingsIcon,
 } from "lucide-react";
 import type { Route } from "next";
 import Link from "next/link";
@@ -34,17 +32,16 @@ const mainNav = [
     url: "/page/customization",
     icon: PenToolIcon,
   },
-
-  {
-    title: "Insights",
-    url: "/page/insights",
-    icon: ChartBarIcon,
-  },
-  {
-    title: "Settings",
-    url: "/page/settings",
-    icon: SettingsIcon,
-  },
+  // {
+  //   title: "Settings",
+  //   url: "/page/settings",
+  //   icon: SettingsIcon,
+  // },
+  // {
+  //   title: "Insights",
+  //   url: "/page/insights",
+  //   icon: ChartBarIcon,
+  // },
 ];
 
 export function NavMain() {

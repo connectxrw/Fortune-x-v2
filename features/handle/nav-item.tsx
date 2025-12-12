@@ -1,8 +1,8 @@
 "use client";
-import { cn } from "@/lib/utils";
-import { Route } from "next";
+import type { Route } from "next";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export default function NavItem({
   href,
@@ -25,8 +25,10 @@ export default function NavItem({
     >
       <span
         className={cn(
-          "group relative px-1 font-medium text-[16px] leading-5.5",
-          pathname === href ? "text-primary" : "text-primary/80"
+          "group relative px-1 text-[16px] leading-5.5",
+          pathname === href
+            ? "font-medium text-primary"
+            : "font-normal text-primary/80"
         )}
       >
         {label}

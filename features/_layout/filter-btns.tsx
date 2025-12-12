@@ -1,4 +1,5 @@
 "use client";
+import { CompassIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import {
@@ -9,8 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import { useFilters } from "@/lib/nuqs-params";
 import { cn } from "@/lib/utils";
-import { MenuSheet } from "../_layout/menu-sheet";
-import { CompassIcon } from "lucide-react";
+import { MenuSheet } from "./menu-sheet";
 
 export default function FilterBtns({
   filters,
@@ -24,7 +24,7 @@ export default function FilterBtns({
   return (
     <div
       className={cn(
-        " w-full overflow-hidden pt-5 lg:pt-7",
+        "w-full overflow-hidden pt-5 lg:pt-7",
         pathname !== "/" && "hidden"
       )}
     >
@@ -40,7 +40,7 @@ export default function FilterBtns({
           <CarouselContent className="-ml-1 max-w-5xl lg:max-w-6xl">
             <CarouselItem className="w-fit basis-auto pl-3 lg:pl-6">
               <MenuSheet>
-                <Button size="sm" variant={"secondary"} className="lg:hidden">
+                <Button className="lg:hidden" size="sm" variant={"secondary"}>
                   <CompassIcon />
                 </Button>
               </MenuSheet>
@@ -69,7 +69,7 @@ export default function FilterBtns({
           </CarouselContent>
           <div
             className={cn(
-              "hidden items-center justify-end md:flex",
+              "hidden items-center justify-end px-3 md:flex lg:px-6",
               filters.length <= 6 && "hidden"
             )}
           >
