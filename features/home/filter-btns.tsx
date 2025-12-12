@@ -9,6 +9,8 @@ import {
 } from "@/components/ui/carousel";
 import { useFilters } from "@/lib/nuqs-params";
 import { cn } from "@/lib/utils";
+import { MenuSheet } from "../_layout/menu-sheet";
+import { CompassIcon } from "lucide-react";
 
 export default function FilterBtns({
   filters,
@@ -22,7 +24,7 @@ export default function FilterBtns({
   return (
     <div
       className={cn(
-        "container w-full overflow-hidden pt-5 lg:pt-7",
+        " w-full overflow-hidden pt-5 lg:pt-7",
         pathname !== "/" && "hidden"
       )}
     >
@@ -31,11 +33,18 @@ export default function FilterBtns({
           className="flex w-full items-center justify-between"
           opts={{
             align: "start",
-            loop: true,
+            loop: false,
             slidesToScroll: 3,
           }}
         >
           <CarouselContent className="-ml-1 max-w-5xl lg:max-w-6xl">
+            <CarouselItem className="w-fit basis-auto pl-3 lg:pl-6">
+              <MenuSheet>
+                <Button size="sm" variant={"secondary"} className="lg:hidden">
+                  <CompassIcon />
+                </Button>
+              </MenuSheet>
+            </CarouselItem>
             <CarouselItem className="w-fit basis-auto pl-2">
               <Button
                 onClick={onClear}

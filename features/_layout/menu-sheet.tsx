@@ -15,19 +15,15 @@ import {
 import { siteConfig } from "@/config/site";
 import MenuNavs from "./menu-navs";
 
-export function MenuSheet() {
+export function MenuSheet({ children }: { children: React.ReactNode }) {
   return (
     <Sheet>
-      <SheetTrigger asChild>
-        <Button className="rounded-full" size="icon-lg" variant={"ghost"}>
-          <MenuIcon className="size-6" />
-        </Button>
-      </SheetTrigger>
+      <SheetTrigger asChild>{children}</SheetTrigger>
       <SheetContent
         className="border border-muted lg:max-w-2xs dark:bg-black"
         side="left"
       >
-        <SheetHeader className="pb-0">
+        <SheetHeader className="pb-0 px-3">
           <SheetTitle className="flex items-center gap-1 md:gap-3">
             <SheetClose asChild>
               <Button className="rounded-full" size="icon-lg" variant={"ghost"}>

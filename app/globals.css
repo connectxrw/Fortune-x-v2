@@ -175,5 +175,5 @@
 }
 
 @utility container {
-  @apply 3xl:max-w-screen-4xl mx-auto max-w-[1400px] px-3 lg:px-6 xl:px-8;
+  @apply 3xl:max-w-screen-4xl mx-auto max-w-[1400px] px-3 lg:px-6;
 }

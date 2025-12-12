@@ -43,7 +43,7 @@ export function SendFeedbackDialog({
           </DialogTrigger>
         )}
         <DialogContent
-          className="sm:max-w-[425px] lg:max-w-xl"
+          className="max-w-full rounded-none md:max-w-[425px] md:rounded-lg lg:max-w-xl"
           showCloseButton={false}
         >
           <DialogHeader>
@@ -74,7 +74,7 @@ export function SendFeedbackDialog({
               />
             </div>
           </div>
-          <DialogFooter>
+          <DialogFooter className="flex flex-row">
             <DialogClose asChild>
               <Button variant="outline">Cancel</Button>
             </DialogClose>

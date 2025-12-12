@@ -1,4 +1,3 @@
-import { ClockIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { CarouselDots } from "@/components/custom/carousel-dots";
@@ -16,8 +15,8 @@ import { PostCardActions } from "./card-actions";
 
 export default function PostCard({ post }: { post: Tpost }) {
   return (
-    <div className="flex cursor-pointer flex-col rounded-lg font-roboto transition-all duration-300 ease-in hover:bg-secondary lg:p-2">
-      <div className="-mx-3.5 lg:mx-0">
+    <div className="flex cursor-pointer flex-col rounded-lg font-roboto transition-all duration-300 ease-in hover:bg-secondary md:p-2">
+      <div className="-mx-3.5 md:mx-0">
         <Carousel
           className="group relative aspect-video h-full w-full bg-muted"
           opts={{
@@ -30,12 +29,12 @@ export default function PostCard({ post }: { post: Tpost }) {
               <CarouselItem key={image}>
                 <Link href={`/view?v=${post.slug}`}>
                   <AspectRatio
-                    className="overflow-hidden lg:rounded-lg"
+                    className="overflow-hidden md:rounded-lg"
                     ratio={16 / 9}
                   >
                     <Image
                       alt="my image"
-                      className="h-full w-full object-cover transition-all duration-300 ease-in group-hover:scale-105 lg:rounded-lg"
+                      className="h-full w-full object-cover transition-all duration-300 ease-in group-hover:scale-105 md:rounded-lg"
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       src={image}
@@ -76,14 +75,10 @@ export default function PostCard({ post }: { post: Tpost }) {
             >
               {post.title}
             </h3>
-            <div className="flex items-center justify-between gap-1 pt-2 text-muted-foreground text-sm">
-              <p className="text-muted-foreground text-sm">
-                {post.businessName}
-              </p>
-              <div className="flex items-center gap-1">
-                <ClockIcon className="size-4" />
-                <span>{post.time}</span>
-              </div>
+            <div className="flex items-center gap-2 pt-2 text-muted-foreground text-xs md:text-sm">
+              <p>{post.businessName}</p>
+              <p>.</p>
+              <p>{post.time}</p>
             </div>
           </div>
           <PostCardActions />

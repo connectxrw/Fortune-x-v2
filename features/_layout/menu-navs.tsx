@@ -12,7 +12,7 @@ export default function MenuNavs() {
   const pathname = usePathname();
   return (
     <div className="flex flex-col gap-3">
-      <div className="px-3">
+      <div className="">
         <Link
           className={cn(
             "flex items-center gap-1 rounded-lg p-2 text-primary/90 text-sm hover:bg-muted/70",

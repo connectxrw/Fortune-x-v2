@@ -18,9 +18,7 @@ const data = {
   },
 };
 
-import { SearchIcon } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
 import { NavMain } from "./nav-main";
 import { NavSecondary } from "./nav-secondary";
 import { NavUser } from "./nav-user";
@@ -38,14 +36,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               </Avatar>
               <span className="font-semibold text-base">Acme Inc.</span>
             </SidebarMenuButton>
-            <Button
-              className="size-8 group-data-[collapsible=icon]:hidden"
-              size="icon"
-              variant="ghost"
-            >
-              <SearchIcon />
-              <span className="sr-only">Search</span>
-            </Button>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>

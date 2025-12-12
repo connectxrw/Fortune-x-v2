@@ -10,7 +10,7 @@ export default function PostDetails({
 }) {
   return (
     <section className="rounded-lg bg-muted/80 p-4">
-      <Collapsible>
+      <Collapsible defaultOpen>
         <CollapsibleTrigger className="w-full cursor-pointer">
           <div className="flex w-full items-center justify-between gap-3 text-sm">
             <div className="flex items-center gap-4">

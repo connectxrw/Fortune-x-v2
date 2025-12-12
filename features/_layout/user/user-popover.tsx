@@ -27,7 +27,7 @@ import { SelectLanguage } from "./lang";
 import { SelectLocation } from "./location";
 
 export default function UserPopover() {
-  const isAuthenticated = false;
+  const isAuthenticated = true;
   const isLoading = false;
 
   if (isLoading) {

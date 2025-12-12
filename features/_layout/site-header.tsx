@@ -1,4 +1,4 @@
-import { BellIcon, SearchIcon } from "lucide-react";
+import { BellIcon, MenuIcon, SearchIcon } from "lucide-react";
 import Link from "next/link";
 import { Suspense } from "react";
 import { Button } from "@/components/ui/button";
@@ -10,15 +10,22 @@ import { AddNewTop } from "./add-new";
 import { MenuSheet } from "./menu-sheet";
 import SearchTop from "./search-top";
 import UserPopover from "./user/user-popover";
+import { SearchMobileSheet } from "./search-mobile";
 
 export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-background/95 py-2 backdrop-blur-lg supports-backdrop-filter:bg-background/80 md:py-2">
-      <div
-        className={cn("flex w-full items-center justify-between px-2 md:px-5")}
-      >
+      <div className={cn("container flex w-full items-center justify-between")}>
         <div className="flex items-center gap-1 md:gap-3">
-          <MenuSheet />
+          <MenuSheet>
+            <Button
+              className="rounded-full hidden lg:flex"
+              size="icon-lg"
+              variant={"ghost"}
+            >
+              <MenuIcon className="size-6" />
+            </Button>
+          </MenuSheet>
           <Link
             className="font-mono font-semibold text-xl capitalize italic tracking-tighter md:text-2xl"
             href={"/"}
@@ -34,13 +41,7 @@ export default function SiteHeader() {
         </div>
 
         <div className="ml-auto flex items-center gap-1 md:gap-2">
-          <Button
-            className="rounded-full lg:hidden"
-            size={"icon-sm"}
-            variant={"ghost"}
-          >
-            <SearchIcon />
-          </Button>
+          <SearchMobileSheet />
           <AddNewTop />
           <Button
             className="hidden rounded-full md:flex"
