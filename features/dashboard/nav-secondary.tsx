@@ -60,6 +60,14 @@ export function NavSecondary() {
                 <span>Send Feedback</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
+            <SidebarMenuItem>
+              <SidebarMenuButton asChild tooltip="Back to home">
+                <Link href={"/"}>
+                  <ExternalLinkIcon />
+                  <span>Back to home</span>
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
           </SidebarMenu>
         </SidebarGroupContent>
       </SidebarGroup>

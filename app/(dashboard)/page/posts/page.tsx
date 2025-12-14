@@ -1,4 +1,5 @@
 import { PlusIcon } from "lucide-react";
+import Link from "next/link";
 import { Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { homePosts, postFilters } from "@/config/data";
@@ -21,9 +22,11 @@ export default function PostPage() {
               filters={postFilters}
             />
           </Suspense>
-          <Button size="sm">
-            <PlusIcon />
-            Add New
+          <Button asChild size="sm">
+            <Link href="/page/posts/new">
+              <PlusIcon />
+              Add New
+            </Link>
           </Button>
         </div>
         <div className="grid @5xl/main:grid-cols-4 @xl/main:grid-cols-3 grid-cols-1 gap-4 gap-y-8">

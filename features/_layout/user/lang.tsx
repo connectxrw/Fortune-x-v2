@@ -24,12 +24,12 @@ export function SelectLanguage() {
   const [lang, setLang] = useState(langs[0]);
   return (
     <Popover>
-      <PopoverTrigger className="flex w-full cursor-pointer items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
+      <PopoverTrigger className="flex w-full cursor-pointer flex-nowrap items-center gap-2 px-3 py-2 text-sm hover:bg-secondary">
         <LanguagesIcon className="size-5 text-muted-foreground" />
-        <span className="capitalize">Display Language: {lang.name}</span>
+        <span className="capitalize">Language: {lang.name}</span>
       </PopoverTrigger>
       <PopoverContent
-        className="w-72 overflow-hidden rounded-xl border border-muted p-0 shadow-lg dark:bg-black"
+        className="min-w-72 overflow-hidden rounded-xl border border-muted p-0 shadow-lg dark:bg-black"
         side="right"
       >
         {langs.map((lan) => (

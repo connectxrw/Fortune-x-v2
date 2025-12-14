@@ -20,6 +20,7 @@ export function MenuSheet({ children }: { children: React.ReactNode }) {
       <SheetTrigger asChild>{children}</SheetTrigger>
       <SheetContent
         className="border border-muted lg:max-w-2xs dark:bg-black"
+        showCloseButton={false}
         side="left"
       >
         <SheetHeader className="px-3 pb-0">
