@@ -1,7 +1,6 @@
 import { MenuIcon } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Sheet,
   SheetClose,
@@ -23,7 +22,7 @@ export function MenuSheet({ children }: { children: React.ReactNode }) {
         className="border border-muted lg:max-w-2xs dark:bg-black"
         side="left"
       >
-        <SheetHeader className="pb-0 px-3">
+        <SheetHeader className="px-3 pb-0">
           <SheetTitle className="flex items-center gap-1 md:gap-3">
             <SheetClose asChild>
               <Button className="rounded-full" size="icon-lg" variant={"ghost"}>
@@ -39,9 +38,9 @@ export function MenuSheet({ children }: { children: React.ReactNode }) {
           </SheetTitle>
           <SheetDescription className="sr-only">FortuneX Menu</SheetDescription>
         </SheetHeader>
-        <ScrollArea className="h-[calc(100vh-10rem)]">
+        <div className="no-scrollbar overflow-y-auto">
           <MenuNavs />
-        </ScrollArea>
+        </div>
         <SheetFooter>
           <Button asChild variant={"secondary"}>
             <Link href="/">Join Waiting List</Link>

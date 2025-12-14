@@ -36,7 +36,7 @@ export default async function PageNavs(props: LayoutProps<"/p/[handle]">) {
   return (
     <nav
       className={cn(
-        "sticky top-15 z-20 w-full gap-4 border-border border-b bg-background"
+        "sticky top-14 z-20 w-full gap-4 border-border border-b bg-background"
       )}
     >
       <div className="container flex items-center gap-4 transition-all duration-1000 ease-in">
