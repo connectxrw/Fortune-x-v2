@@ -6,4 +6,7 @@ export type Tpost = {
   businessHandle: string;
   views: string;
   time: string;
+  type: "post" | "product";
+  price?: string;
+  productName?: string;
 };

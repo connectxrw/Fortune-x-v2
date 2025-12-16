@@ -35,7 +35,7 @@ export function CardSheet() {
       <SheetTrigger asChild>
         <Button variant="outline">Open</Button>
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent className="lg:max-w-lg" showCloseButton={false}>
         <ScrollArea className="flex h-full">
           <SheetHeader className="flex gap-4 px-1 lg:px-2">
             <div className="flex items-center justify-between gap-2">

@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  ActivityIcon,
   ClapperboardIcon,
   LayoutDashboardIcon,
   PenToolIcon,
@@ -31,6 +32,11 @@ const mainNav = [
     title: "Customization",
     url: "/page/customization",
     icon: PenToolIcon,
+  },
+  {
+    title: "Activity",
+    url: "/page/activity",
+    icon: ActivityIcon,
   },
   // {
   //   title: "Settings",

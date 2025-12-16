@@ -208,6 +208,7 @@ export const homePosts: Tpost[] = [
     businessHandle: "@rathon",
     views: "4.9K",
     time: "17 hours ago",
+    type: "post",
   },
   {
     imgUrls: ["/places/nyungwe.jpg"],
@@ -217,6 +218,7 @@ export const homePosts: Tpost[] = [
     businessHandle: "@nyungwe",
     views: "7K",
     time: "1 hours ago",
+    type: "post",
   },
   {
     imgUrls: ["/restaurant/image-1.avif"],
@@ -226,6 +228,7 @@ export const homePosts: Tpost[] = [
     businessHandle: "@bistro",
     views: "1.2K",
     time: "10 minutes ago",
+    type: "post",
   },
   {
     imgUrls: ["/houses/image-6.avif", "/houses/image-3.avif"],
@@ -235,5 +238,18 @@ export const homePosts: Tpost[] = [
     businessHandle: "@houserent",
     views: "1.2K",
     time: "10 minutes ago",
+    type: "post",
+  },
+  {
+    imgUrls: ["/t-shirt-2.avif"],
+    title: "Brand New T-Shirt of all sizes",
+    slug: "brand-t-shirt",
+    businessName: "Bistro",
+    businessHandle: "@bistro",
+    views: "1.2K",
+    time: "10 minutes ago",
+    type: "product",
+    productName: "T-shirt",
+    price: "20,000",
   },
 ];
